@@ -1,0 +1,265 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Page Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
+	<link rel="stylesheet" href="css/estilos.css" />
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+</head>
+
+<body>
+
+<div data-role="page" id="inicial">
+     <div data-role="header" style="background-color: rgb(38,160,109); color: white">
+        <h1>Likefinder</h1>
+     </div>
+     <div role="main" class="ui-content" style="text-center: center;">
+        <img src = "img/mano48x48.jpg">
+        <div class="ui-field-contain">
+            <input type="text" name="usuario" id="name" placeholder="Nombre Usuario">
+        </div>
+        <div class="ui-field-contain">
+             <input type="text" name="contrasena" id="name" placeholder="Contraseña">
+        </div>
+        <div>
+            <a href="#perfil" class="ui-btn">Ingresar</a>
+        </div>
+        <div>
+            <a href="#registro" class="ui-btn">Registrarse</a>
+        </div>
+    </div>
+    <div data-role="footer" style = "background-color: rgb(38,160,109); color: white"> 
+       <h4></h4> 
+    </div>
+</div>
+
+<div data-role="page" id="registro">
+    <div data-role="header" style="background-color: rgb(38,160,109); color: white">
+        <h1>Likefinder</h1>
+     </div>
+     <div role="main" class="ui-content" style="text-center: center;">
+        <img src = "img/placeholder.gif" style="width: 225px">
+        <div class="ui-field-contain">
+         <input type="text" name="usuario" id="name" value="" placeholder = "Nombre">
+        </div>
+        <div class="ui-field-contain">
+         <input type="text" name="contrasena" id="name" value="" placeholder = "Contraseña">
+        </div>
+        <div class="ui-field-contain">
+         <input type="text" name="usuario" id="name" value="" placeholder = "Correo Electronico">
+        </div>
+        <input type="text" data-role="date" data-inline="true">
+        <div>
+            <a href="#perfil" class="ui-btn">Registrarse</a>
+        </div>
+    </div>
+    <div data-role="footer" style = "background-color: rgb(38,160,109); color: white"> 
+       <h4></h4> 
+    </div>
+</div>
+
+<div data-role="page" id="perfil">
+    <div data-role="header" style="background-color: rgb(38,160,109); color: white">
+       
+        <select name="slider2" id="slider2" data-role="slider" style="display: inline;" class="ui-btn-left">
+            <option value="off">Oculto</option>
+            <option value="on">Disp.</option>
+        </select>
+        <h1>Likefinder</h1>
+            <a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-gear">Opciones</a>
+            <div data-role="popup" id="popupMenu" data-theme="b">
+                    <ul data-role="listview" data-inset="true" style="min-width:210px;">
+                        <li><a href="#editarPerfil">Editar perfil</a></li>
+                        <li><a href="#contactos">Lista de Contactos</a></li>
+                        <li><a href="#seguridad">Opciones de Seguridad</a></li>
+                    </ul>
+        </div>
+        
+     </div>
+     
+      <div role="main" class="ui-content" style="text-center: center;">
+             <img src = "img/placeholder.gif" style = "width: 225px">
+
+            <table  data-role="table" id="table-column-toggle" data-mode="columntoggle"  class="ui-responsive table-stroke">
+            <tr>
+                <th width = "50%" style = "text-align : left">XP:</th>
+                <td>30</td>
+            </tr>
+            
+             <tr>
+                <th style = "text-align : left">Tamaño del Circulo:</th>
+                <td>30</td>
+            </tr>
+            
+             <tr>
+                <th style = "text-align : left">Ranking Bogota:</th>
+                <td>30</td>
+            </tr>
+            
+             <tr>
+                <th style = "text-align : left">Ranking Colombia:</th>
+                <td>30</td>
+            </tr>
+            
+             <tr>
+                <th style = "text-align : left">Ranking America:</th>
+                <td>30</td>
+            </tr>
+            
+             <tr>
+                <th style = "text-align : left">Ranking Mundial:</th>
+                <td>30</td>
+            </tr>
+        
+        </table>
+    </div>
+     <div data-role="footer" style = "background-color: rgb(38,160,109); color: white"> 
+       <a href="#buscarAmigos" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-star">Buscar Amigos</a>
+       <a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-plus ui-btn-b">Crear Evento</a>
+       <a href="#inicial" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-b ui-mini">Desloguear</a>
+    </div>
+</div>
+
+<div data-role="page" id="editarPerfil">
+    <div data-role="header" style="background-color: rgb(38,160,109); color: white">
+     <a href="#perfil" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-left">atras</a>
+        <h1>Likefinder</h1>
+     </div>
+     <div role="main" class="ui-content" style="text-center: center;">
+        <img src = "img/placeholder.gif" style="width: 225px">
+        <div class="ui-field-contain">
+         <input type="text" name="usuario" id="name" value="" placeholder = "Nombre">
+        </div>
+        <div class="ui-field-contain">
+         <input type="text" name="contrasena" id="name" value="" placeholder = "Contraseña">
+        </div>
+        <div class="ui-field-contain">
+         <input type="text" name="usuario" id="name" value="" placeholder = "Correo Electronico">
+        </div>
+        <input type="text" data-role="date" data-inline="true">
+        <div>
+            <a href="#perfil" class="ui-btn">Editar</a>
+        </div>
+    </div>
+    <div data-role="footer" style = "background-color: rgb(38,160,109); color: white"> 
+       <h4></h4> 
+    </div>
+</div>
+
+<div data-role="page" id="contactos">
+     <div data-role="header" style="background-color: rgb(38,160,109); color: white">
+        <h1>Likefinder</h1>
+        
+        <a href="#perfil" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-left">atras</a>
+     </div>
+     <div role="main" class="ui-content" style="text-center: center;">
+      <ul data-role="listview">
+    <li><a href="#">Pepito Perez</a></li>
+    <li><a href="#">Luis Fernandez</a></li>
+    <li><a href="#">Juan Hernandez</a></li>
+    <li><a href="#">Fulanita Herrera</a></li>
+    <li><a href="#">Fernanda Penagos</a></li>
+</ul>
+    </div>
+    <div data-role="footer" style = "background-color: rgb(38,160,109); color: white"> 
+       <h4></h4> 
+    </div>
+</div>
+
+
+
+<div data-role="page" id="buscarAmigos">
+     <div data-role="header" style="background-color: rgb(38,160,109); color: white">
+        <h1>Likefinder</h1>
+        <a href="#perfil" class="ui-shadow ui-btn ui-corner-all">Perfil</a>
+     </div>
+     <div role="main" class="ui-content" style="text-center: center;">
+      <ul data-role="listview">
+    <li><a href="#mapa">Pepito Perez</a></li>
+    <li><a href="#mapa">Luis Fernandez</a></li>
+    <li><a href="#mapa">Juan Hernandez</a></li>
+    <li><a href="#mapa">Fulanita Herrera</a></li>
+    <li><a href="#mapa">Fernanda Penagos</a></li>
+</ul>
+    </div>
+    <div data-role="footer" style = "background-color: rgb(38,160,109); color: white"> 
+       <h4></h4> 
+    </div>
+</div>
+
+<div data-role="page" id="mapa">
+     <div data-role="header" style="background-color: rgb(38,160,109); color: white">
+        <h1>Likefinder</h1>
+        <a href="#perfil" class="ui-shadow ui-btn ui-corner-all">Perfil</a>
+     </div>
+     <div role="main" class="ui-content" style="text-center: center;">
+      <img src = "img/mapa.gif">
+      <a href="#popupBasic" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop">Generar Numero</a>
+        <div data-role="popup" id="popupBasic">
+            <p>Numero generado: 00012</p>
+        </div>
+        <div class="ui-field-contain">
+             <input type="text" name="generado" id="name" placeholder="Escribe el numero">
+        </div>
+        <a href="#aceptarAmistad" class="ui-btn">Continuar</a>
+    </div>
+    <div data-role="footer" style = "background-color: rgb(38,160,109); color: white"> 
+       <h4></h4> 
+    </div>
+    
+</div>
+
+<div data-role="page" id="aceptarAmistad">
+     <div data-role="header" style="background-color: rgb(38,160,109); color: white">
+        <h1>Likefinder</h1>
+        <a href="#" class="ui-shadow ui-btn ui-corner-all">Perfil</a>
+     </div>
+     <div role="main" class="ui-content" style="text-center: center;">
+     <img src = "img/placeholder.gif" style = "width: 225px">
+
+            <table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive">
+            <tr>
+                <th width = "50%" style = "text-align : left">XP:</th>
+                <td>30</td>
+            </tr>
+            
+             <tr>
+                <th style = "text-align : left">Tamaño del Circulo:</th>
+                <td>30</td>
+            </tr>
+            
+             <tr>
+                <th style = "text-align : left">Ranking Bogota:</th>
+                <td>30</td>
+            </tr>
+            
+             <tr>
+                <th style = "text-align : left">Ranking Colombia:</th>
+                <td>30</td>
+            </tr>
+            
+             <tr>
+                <th style = "text-align : left">Ranking America:</th>
+                <td>30</td>
+            </tr>
+            
+             <tr>
+                <th style = "text-align : left">Ranking Mundial:</th>
+                <td>30</td>
+            </tr>
+        
+        </table>
+        <a href="#perfil" class="ui-btn">Aceptar Amistad</a>
+        <a href="#perfil" class="ui-btn">Negar Amistad</a>
+    </div>
+    <div data-role="footer" style = "background-color: rgb(38,160,109); color: white"> 
+       <h4></h4> 
+    </div>
+    
+</div>
+
+</body>
+</html>
