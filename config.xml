@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.gmail.jenny.prieto9207"
+        versionCode = "1" 
+        version     = "0.0.1" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>LikeFinder</name>
+
+    <description>
+        Una aplicacion que te ayuda a encontrar personas con tu mismos gustos, cuando se encuentran cerca.
+    </description>
+
+    <author href="https://build.phonegap.com" email="jenny.prieto9207@gmail.com">
+        Jenny Andrea Prieto
+        David Velasco
+        Nelson Yazo
+    </author>
+    
+    <icon src="icon.png" />
+    <gap:splash src="splash.png" />
+
+</widget>

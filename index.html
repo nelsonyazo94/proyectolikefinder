@@ -4,10 +4,15 @@
 	<title>Page Title</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
-	<link rel="stylesheet" href="css/estilos.css" />
-	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/themes/tema.min.css" />
+     <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+     <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
+     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> 
+     <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+    <script src="//rawgithub.com/jquery/jquery-ui/1.10.4/ui/jquery.ui.datepicker.js"></script>
+    <script id="mobile-datepicker" src="//rawgithub.com/arschmitz/jquery-mobile-datepicker-wrapper/v0.1.1/jquery.mobile.datepicker.js"></script>
+    <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false&language=es"> </script>
 </head>
 
 <body>
@@ -25,10 +30,10 @@
              <input type="text" name="contrasena" id="name" placeholder="Contraseña">
         </div>
         <div>
-            <a href="#perfil" class="ui-btn">Ingresar</a>
+            <a href="#perfil" data-transition="slide" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Ingresar</a>
         </div>
         <div>
-            <a href="#registro" class="ui-btn">Registrarse</a>
+            <a href="#registro" data-transition="slide" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Registrarse</a>
         </div>
     </div>
     <div data-role="footer" style = "background-color: rgb(38,160,109); color: white"> 
@@ -39,8 +44,8 @@
 <div data-role="page" id="registro">
     <div data-role="header" style="background-color: rgb(38,160,109); color: white">
         <h1>Likefinder</h1>
-     </div>
-     <div role="main" class="ui-content" style="text-center: center;">
+    </div>
+    <div role="main" class="ui-content" style="text-center: center;">
         <img src = "img/placeholder.gif" style="width: 225px">
         <div class="ui-field-contain">
          <input type="text" name="usuario" id="name" value="" placeholder = "Nombre">
@@ -53,10 +58,10 @@
         </div>
         <input type="text" data-role="date" data-inline="true">
         <div>
-            <a href="#perfil" class="ui-btn">Registrarse</a>
+            <a href="#perfil" data-transition="slide" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Registrarse</a>
         </div>
     </div>
-    <div data-role="footer" style = "background-color: rgb(38,160,109); color: white"> 
+    <div data-role="footer" style = "background-color: rgb(38,160,109); color: white" data-position="fixed"> 
        <h4></h4> 
     </div>
 </div>
@@ -64,18 +69,27 @@
 <div data-role="page" id="perfil">
     <div data-role="header" style="background-color: rgb(38,160,109); color: white">
        
-        <select name="slider2" id="slider2" data-role="slider" style="display: inline;" class="ui-btn-left">
-            <option value="off">Oculto</option>
-            <option value="on">Disp.</option>
-        </select>
-        <h1>Likefinder</h1>
-            <a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-gear">Opciones</a>
+       <div class="ui-grid-b">
+            <div class="ui-block-a"> 
+                 <select name="slider2" id="slider2" data-role="slider" style="display: inline;" class="ui-btn-left">
+                <option value="off">Oculto</option>
+                <option value="on">Disp.</option>
+                </select>
+            </div>
+            <div class="ui-block-b">
+                <h1>Likefinder</h1>
+            </div>
+            <div class="ui-block-c">
+                <a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-gear">Opciones</a>
             <div data-role="popup" id="popupMenu" data-theme="b">
                     <ul data-role="listview" data-inset="true" style="min-width:210px;">
-                        <li><a href="#editarPerfil">Editar perfil</a></li>
-                        <li><a href="#contactos">Lista de Contactos</a></li>
-                        <li><a href="#seguridad">Opciones de Seguridad</a></li>
+                        <li><a href="#editarPerfil" data-transition="slide">Editar perfil</a></li>
+                        <li><a href="#contactos" data-transition="slide">Lista de Contactos</a></li>
+                       
                     </ul>
+            </div>
+        </div>
+       
         </div>
         
      </div>
@@ -117,15 +131,15 @@
         </table>
     </div>
      <div data-role="footer" style = "background-color: rgb(38,160,109); color: white"> 
-       <a href="#buscarAmigos" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-star">Buscar Amigos</a>
-       <a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-plus ui-btn-b">Crear Evento</a>
-       <a href="#inicial" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-b ui-mini">Desloguear</a>
+       <a href="#buscarAmigos" data-transition="slide" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-star">Buscar Amigos</a>
+       <a href="#crearEvento" data-transition="slide" class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-plus ui-btn-b">Crear Evento</a>
+       <a href="#inicial" data-transition="flip" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-b ui-mini">Desloguear</a>
     </div>
 </div>
 
 <div data-role="page" id="editarPerfil">
     <div data-role="header" style="background-color: rgb(38,160,109); color: white">
-     <a href="#perfil" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-left">atras</a>
+     <a href="#perfil"  data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-left">atras</a>
         <h1>Likefinder</h1>
      </div>
      <div role="main" class="ui-content" style="text-center: center;">
@@ -153,7 +167,7 @@
      <div data-role="header" style="background-color: rgb(38,160,109); color: white">
         <h1>Likefinder</h1>
         
-        <a href="#perfil" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-left">atras</a>
+        <a href="#perfil" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-left">atras</a>
      </div>
      <div role="main" class="ui-content" style="text-center: center;">
       <ul data-role="listview">
@@ -162,7 +176,7 @@
     <li><a href="#">Juan Hernandez</a></li>
     <li><a href="#">Fulanita Herrera</a></li>
     <li><a href="#">Fernanda Penagos</a></li>
-</ul>
+    </ul>
     </div>
     <div data-role="footer" style = "background-color: rgb(38,160,109); color: white"> 
        <h4></h4> 
@@ -174,7 +188,7 @@
 <div data-role="page" id="buscarAmigos">
      <div data-role="header" style="background-color: rgb(38,160,109); color: white">
         <h1>Likefinder</h1>
-        <a href="#perfil" class="ui-shadow ui-btn ui-corner-all">Perfil</a>
+        <a href="#perfil" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-left">atras</a>
      </div>
      <div role="main" class="ui-content" style="text-center: center;">
       <ul data-role="listview">
@@ -183,7 +197,7 @@
     <li><a href="#mapa">Juan Hernandez</a></li>
     <li><a href="#mapa">Fulanita Herrera</a></li>
     <li><a href="#mapa">Fernanda Penagos</a></li>
-</ul>
+    </ul>
     </div>
     <div data-role="footer" style = "background-color: rgb(38,160,109); color: white"> 
        <h4></h4> 
@@ -193,9 +207,12 @@
 <div data-role="page" id="mapa">
      <div data-role="header" style="background-color: rgb(38,160,109); color: white">
         <h1>Likefinder</h1>
-        <a href="#perfil" class="ui-shadow ui-btn ui-corner-all">Perfil</a>
+        <a href="#perfil"  data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-left">atras</a>
      </div>
      <div role="main" class="ui-content" style="text-center: center;">
+         <div id="localizacion">
+             
+         </div>
       <img src = "img/mapa.gif">
       <a href="#popupBasic" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop">Generar Numero</a>
         <div data-role="popup" id="popupBasic">
@@ -212,16 +229,52 @@
     
 </div>
 
+<script>
+    $( document ).on( "pagecreate", "#mapa", function() {
+    var defaultLatLng = new google.maps.LatLng(34.0983425, -118.3267434);
+    // Default to Hollywood, CA when no geolocation support
+    if ( navigator.geolocation ) {
+        function success(pos) {
+            // Location found, show map with these coordinates
+            drawMap(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+        }
+        function fail(error) {
+            drawMap(defaultLatLng);
+            // Failed to find location, show default map
+        }
+        // Find the users current position.
+        Cache the location for 5 minutes, timeout after 6 seconds
+        navigator.geolocation.getCurrentPosition(success, fail, {maximumAge: 500000, enableHighAccuracy:true, timeout: 6000});
+    } else {
+        drawMap(defaultLatLng);
+        // No geolocation support, show default map
+    }
+    function drawMap(latlng) {
+          var myOptions = {
+            zoom: 10,
+            center: latlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("localizacion"), myOptions);
+        // Add an overlay to the map of current lat/lng
+        var marker = new google.maps.Marker({
+            position: latlng,
+            map: map,
+            title: "Greetings!"
+        });
+    }
+    });
+</script>
+
 <div data-role="page" id="aceptarAmistad">
      <div data-role="header" style="background-color: rgb(38,160,109); color: white">
         <h1>Likefinder</h1>
-        <a href="#" class="ui-shadow ui-btn ui-corner-all">Perfil</a>
+        <a href="#perfil" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-left">atras</a>
      </div>
      <div role="main" class="ui-content" style="text-center: center;">
      <img src = "img/placeholder.gif" style = "width: 225px">
 
-            <table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive">
-            <tr>
+            <table  data-role="table" id="table-column-toggle" data-mode="columntoggle"  class="ui-responsive table-stroke">
                 <th width = "50%" style = "text-align : left">XP:</th>
                 <td>30</td>
             </tr>
@@ -258,8 +311,41 @@
     <div data-role="footer" style = "background-color: rgb(38,160,109); color: white"> 
        <h4></h4> 
     </div>
+</div>
+
+<div data-role="page" id="crearEvento">
+     <div data-role="header" style="background-color: rgb(38,160,109); color: white">
+        <h1>Likefinder</h1>
+        <a href="#perfil" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-left">atras</a>
+     </div>
+     <div role="main" class="ui-content" style="text-center: center;">
+      <input type="text" data-role="date" data-inline="true">
+      
+        <a href="#eventoAmigos" data-transition="slide" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Elegir Fecha</a>
+    </div>
+    <div data-role="footer" style = "background-color: rgb(38,160,109); color: white"> 
+       <h4></h4> 
+    </div>
     
 </div>
+
+<div data-role="page" id="eventoAmigos">
+     <div data-role="header" style="background-color: rgb(38,160,109); color: white">
+        <h1>Likefinder</h1>
+        <a href="#perfil" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-left">atras</a>
+     </div>
+     <div role="main" class="ui-content" style="text-center: center;">
+      
+      
+        <a href="#eventoAmigos" class="ui-btn">Elegir Fecha</a>
+    </div>
+    <div data-role="footer" style = "background-color: rgb(38,160,109); color: white"> 
+       <h4></h4> 
+    </div>
+    
+</div>
+    
+
 
 </body>
 </html>
